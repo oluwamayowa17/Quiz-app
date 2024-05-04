@@ -35,9 +35,9 @@ const questions = [
         answer: 'Entrepreneur'
     },
     {
-        question: 'What is my favorite book or book series?',
-        options: ['Harry Potter', 'The Lord of the Rings', 'To Kill a Mockingbird', 'The Catcher in the Rye'],
-        answer:'Harry Potter'
+        question: 'What is my favorite Love Language?',
+        options: ['Physical Touch', 'Act of service', 'Receiving of gifts', 'Quality Time'],
+        answer: 'Receiving of gifts'
     },
     {
         question: 'How many siblings do I have?',
@@ -190,11 +190,11 @@ function showScore() {
     let message;
 
     if (scorePercentage >= 70){
-        message = "Congratulations! You did a great job."
+        message = "Congratulations! You know me baby❤"
     }else if(scorePercentage >= 50 && scorePercentage < 70){
-        message = "Good job! You could definately do better👍"
+        message = "Good job! You still have a lot of listening to do👍"
     }else{
-        message = 'Oopsies!! Better luck next time'
+        message = 'I bet the only thing you know abou me is my name😒'
     }
     document.getElementById('message').textContent = message;
 }
