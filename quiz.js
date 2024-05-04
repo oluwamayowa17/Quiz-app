@@ -27,7 +27,7 @@ const questions = [
     {
         question: 'What is my most cherished childhood memory?',
         options: ['Family Vacations', 'Playing with Friends', 'Holidays', 'Spending time with my siblings'],
-        answer: 'Holidays'
+        answer: 'Spending time with my siblings'
     },
     {
         question: 'What is my dream job?',
@@ -161,8 +161,8 @@ function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
     
-    } else if (currentQuestionIndex == lastIndex){
-        nextBtn.style.display = 'none'
+    // } else if (currentQuestionIndex == lastIndex){
+    //     nextBtn.style.display = 'none'
     }
     else{
         clearInterval(timerInterval); // Stop the timer when all questions are answered
