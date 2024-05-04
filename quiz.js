@@ -37,7 +37,7 @@ const questions = [
     {
         question: 'What is my favorite Love Language?',
         options: ['Physical Touch', 'Act of service', 'Receiving of gifts', 'Quality Time'],
-        answer: 'Receiving of gifts'
+        answer: 'Quality Time'
     },
     {
         question: 'How many siblings do I have?',
@@ -47,7 +47,7 @@ const questions = [
     {
         question: 'What is my favorite hobby or pastime?',
         options: ['Reading', 'Cooking', 'Composing Music', 'Painting/Drawing'],
-        answer:'Composing Music'
+        answer:'Cooking'
     },
     {
         question: 'What is my favorite season and why?',
@@ -98,7 +98,7 @@ const timerDisplay = document.getElementById('timer');
 
 let currentQuestionIndex = 0;
 let score = 0;
-let timeLeft = 120;
+let timeLeft = 240;
   
 function startQuiz() {
     document.getElementById('intro').style.display = 'none';
@@ -150,8 +150,8 @@ function checkAnswer() {
     }
 }
 
-// const keysArray = Object.keys(questions);
-// const lastIndex = keysArray.length - 1;
+const keysArray = Object.keys(questions);
+const lastIndex = keysArray.length - 1;
   
 function nextQuestion() {
     checkAnswer(); // Call checkAnswer before moving to the next question
@@ -161,7 +161,9 @@ function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
     
-    } 
+    } else if (currentQuestionIndex == lastIndex){
+        nextBtn.style.display = 'none'
+    }
     else{
         clearInterval(timerInterval); // Stop the timer when all questions are answered
         showScore();
