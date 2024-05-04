@@ -22,7 +22,7 @@ const questions = [
     {
         question: 'If you could have any superpower, what would it be?',
         options: ['Flight', 'Invisibility', 'Teleportation', 'Mind Reading'],
-        answer: 'Teleportation'
+        answer: 'Mind Reading'
     },
     {
         question: 'What is my most cherished childhood memory?',
