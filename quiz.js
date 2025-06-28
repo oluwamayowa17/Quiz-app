@@ -161,8 +161,8 @@ function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
     
-    // } else if (currentQuestionIndex == lastIndex){
-    //     nextBtn.style.display = 'none'
+    } else if (currentQuestionIndex == lastIndex){
+        nextBtn.style.display = 'none'
     }
     else{
         clearInterval(timerInterval); // Stop the timer when all questions are answered
